@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Dineshvar Mathiazhagan — Marketing & Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0E0E0E;
+  --ink2:#3A3A3A;
+  --ink3:#7A7A7A;
+  --paper:#FAFAF8;
+  --paper2:#F2F0EB;
+  --paper3:#E8E4DB;
+  --gold:#B8860B;
+  --gold2:#D4A017;
+  --gold-pale:#F5EDD0;
+  --red:#8B1A1A;
+  --teal:#1A5F5F;
+  --teal-pale:#E0EFEF;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;line-height:1.6}
+
+/* ─── CURSOR ACCENT ─── */
+::selection{background:var(--gold-pale);color:var(--ink)}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 60px;height:64px;
+  background:rgba(250,250,248,0.9);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--paper3);
+}
+.nav-wordmark{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;font-weight:700;letter-spacing:0.04em;
+  color:var(--ink);text-decoration:none;
+}
+.nav-wordmark em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{
+  font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink3);transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{
+  background:var(--ink);color:var(--paper)!important;
+  padding:8px 20px;border-radius:2px;
+  font-size:0.75rem!important;letter-spacing:0.12em!important;
+  transition:background 0.2s!important;
+}
+.nav-cta:hover{background:var(--gold)!important;color:var(--ink)!important}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;display:grid;
+  grid-template-columns:1fr 1fr;
+  padding-top:64px;
+  overflow:hidden;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 60px 80px;
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+.hero-left::after{
+  content:'';position:absolute;bottom:-120px;left:-120px;
+  width:400px;height:400px;border-radius:50%;
+  background:rgba(184,134,11,0.07);pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'DM Mono',monospace;
+  font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold2);border:1px solid rgba(212,160,23,0.4);
+  padding:6px 14px;border-radius:2px;margin-bottom:40px;
+  width:fit-content;
+}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold2);animation:blink 2s ease infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero-h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.2rem,5vw,5.5rem);
+  font-weight:700;line-height:1.0;
+  color:#FAFAF8;margin-bottom:32px;
+  letter-spacing:-0.01em;
+}
+.hero-h1 em{color:var(--gold2);font-style:italic}
+.hero-subtitle{
+  font-size:1rem;line-height:1.8;color:rgba(250,250,248,0.6);
+  max-width:440px;margin-bottom:48px;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-gold{
+  background:var(--gold);color:var(--ink);
+  padding:13px 28px;font-weight:600;font-size:0.82rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;
+  transition:background 0.2s,transform 0.15s;
+}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-outline{
+  background:transparent;color:rgba(250,250,248,0.8);
+  padding:13px 28px;font-weight:400;font-size:0.82rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;
+  border:1px solid rgba(250,250,248,0.2);
+  transition:all 0.2s;
+}
+.btn-outline:hover{border-color:var(--gold2);color:var(--gold2)}
+
+/* hero stats */
+.hero-stats{
+  display:flex;gap:32px;margin-top:60px;
+  padding-top:40px;border-top:1px solid rgba(250,250,248,0.1);
+}
+.stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.2rem;font-weight:700;color:#FAFAF8;line-height:1;
+  margin-bottom:4px;
+}
+.stat-num span{color:var(--gold2);font-size:1.4rem}
+.stat-label{font-size:0.75rem;color:rgba(250,250,248,0.45);letter-spacing:0.08em;text-transform:uppercase}
+
+/* hero right — photo collage */
+.hero-right{
+  position:relative;
+  background:var(--paper2);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.hero-photo-main{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  filter:saturate(0.85) contrast(1.05);
+  display:block;
+}
+.hero-photo-overlay{
+  position:absolute;bottom:32px;left:32px;right:32px;
+  background:rgba(14,14,14,0.82);
+  backdrop-filter:blur(8px);
+  padding:20px 24px;border-radius:2px;
+  border-left:3px solid var(--gold);
+}
+.hero-photo-overlay p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-style:italic;color:#FAFAF8;
+  line-height:1.5;
+}
+.hero-photo-overlay cite{
+  display:block;margin-top:8px;
+  font-family:'DM Sans',sans-serif;
+  font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--gold2);
+}
+
+/* ─── TICKER ─── */
+.ticker{
+  background:var(--gold);
+  padding:11px 0;overflow:hidden;
+  border-top:1px solid rgba(0,0,0,0.08);
+  border-bottom:1px solid rgba(0,0,0,0.08);
+}
+.ticker-inner{
+  display:flex;width:max-content;
+  animation:scrollticker 28s linear infinite;
+}
+.ticker-inner:hover{animation-play-state:paused}
+.ticker-item{
+  font-family:'DM Mono',monospace;
+  font-size:0.68rem;font-weight:500;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--ink);padding:0 28px;white-space:nowrap;
+}
+.ticker-item::after{content:'◆';margin-left:28px;opacity:0.3}
+@keyframes scrollticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── SECTIONS SHARED ─── */
+section{padding:100px 0}
+.container{max-width:1120px;margin:0 auto;padding:0 60px}
+.sec-eyebrow{
+  font-family:'DM Mono',monospace;
+  font-size:0.68rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:12px;
+}
+.sec-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,4vw,3.4rem);
+  font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:56px;
+}
+.sec-title em{font-style:italic;color:var(--gold)}
+
+/* ─── ABOUT ─── */
+#about{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:start}
+.about-body p{
+  font-size:1.0rem;line-height:1.85;color:var(--ink2);margin-bottom:22px;
+}
+.about-body p:last-child{margin-bottom:0}
+.about-body strong{color:var(--ink);font-weight:600}
+.about-sidebar{}
+.sidebar-photo{
+  width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;
+  filter:saturate(0.8);border-radius:2px;margin-bottom:28px;
+}
+.about-chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  font-size:0.78rem;color:var(--ink2);
+  background:var(--paper2);border:1px solid var(--paper3);
+  padding:6px 14px;border-radius:20px;
+  transition:all 0.2s;cursor:default;
+}
+.chip:hover{background:var(--gold-pale);border-color:var(--gold);color:var(--ink)}
+
+/* ─── JOURNEY ─── */
+#journey{background:var(--ink);color:var(--paper)}
+#journey .sec-eyebrow{color:var(--gold2)}
+#journey .sec-eyebrow::before{background:var(--gold2)}
+#journey .sec-title{color:#FAFAF8}
+#journey .sec-title em{color:var(--gold2)}
+
+.journey-timeline{position:relative;padding-left:0}
+.journey-line{
+  position:absolute;left:120px;top:0;bottom:0;
+  width:1px;background:rgba(250,250,248,0.12);
+}
+.journey-item{
+  display:grid;grid-template-columns:120px 1fr;
+  gap:0 40px;margin-bottom:0;position:relative;
+}
+.journey-item:not(:last-child){margin-bottom:0}
+.journey-year{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.5rem;font-weight:700;
+  color:rgba(250,250,248,0.15);
+  text-align:right;padding-top:4px;
+  line-height:1;
+  transition:color 0.3s;
+}
+.journey-item:hover .journey-year{color:var(--gold2)}
+.journey-content{
+  padding:0 0 60px 40px;
+  border-left:2px solid rgba(250,250,248,0.08);
+  position:relative;
+  transition:border-color 0.3s;
+}
+.journey-item:hover .journey-content{border-left-color:var(--gold)}
+.journey-content::before{
+  content:'';position:absolute;left:-6px;top:8px;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--ink);border:2px solid rgba(250,250,248,0.25);
+  transition:border-color 0.3s,background 0.3s;
+}
+.journey-item:hover .journey-content::before{
+  background:var(--gold);border-color:var(--gold);
+}
+.journey-place{
+  font-family:'DM Mono',monospace;
+  font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold2);margin-bottom:8px;
+}
+.journey-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.7rem;font-weight:600;color:#FAFAF8;
+  margin-bottom:12px;line-height:1.2;
+}
+.journey-body{
+  font-size:0.95rem;line-height:1.8;
+  color:rgba(250,250,248,0.55);
+  max-width:560px;
+}
+.journey-photo{
+  width:180px;height:120px;object-fit:cover;
+  border-radius:2px;margin-top:20px;
+  filter:saturate(0.7) contrast(1.1);
+  opacity:0.8;
+}
+
+/* ─── EXPERIENCE ─── */
+#experience{background:var(--paper)}
+.exp-grid{display:flex;flex-direction:column;gap:2px}
+.exp-card{
+  background:var(--paper);
+  border:1px solid var(--paper3);
+  border-radius:2px;overflow:hidden;
+  transition:border-color 0.2s;
+}
+.exp-card:hover{border-color:var(--gold)}
+.exp-top{
+  display:grid;grid-template-columns:auto 1fr auto;
+  gap:0 28px;align-items:center;
+  padding:28px 32px;cursor:pointer;
+}
+.exp-top:hover .exp-toggle{color:var(--gold)}
+.exp-logo{
+  width:48px;height:48px;border-radius:2px;
+  background:var(--paper2);border:1px solid var(--paper3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;font-weight:700;color:var(--gold);
+  flex-shrink:0;
+}
+.exp-info{}
+.exp-co{
+  font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:4px;
+}
+.exp-role-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:600;color:var(--ink);
+}
+.exp-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.exp-period{font-size:0.8rem;color:var(--ink3);white-space:nowrap}
+.exp-toggle{
+  font-size:1.4rem;color:var(--ink3);line-height:1;
+  transition:transform 0.3s,color 0.2s;
+}
+.exp-card.open .exp-toggle{transform:rotate(45deg);color:var(--gold)}
+.exp-body-panel{display:none;padding:0 32px 32px;padding-left:108px}
+.exp-card.open .exp-body-panel{display:block}
+.exp-context{
+  font-size:0.88rem;color:var(--ink3);
+  font-style:italic;margin-bottom:20px;line-height:1.65;
+}
+.exp-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.exp-highlight{
+  font-size:0.9rem;color:var(--ink2);
+  padding:10px 0;padding-right:24px;
+  border-bottom:1px solid var(--paper3);
+  line-height:1.6;
+  display:flex;gap:12px;
+}
+.exp-highlight::before{
+  content:'→';color:var(--gold);flex-shrink:0;margin-top:1px;
+}
+.exp-highlight:nth-last-child(-n+2){border-bottom:none}
+.exp-tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.exp-tag{
+  font-size:0.72rem;color:var(--teal);
+  background:var(--teal-pale);border:1px solid rgba(26,95,95,0.15);
+  padding:4px 12px;border-radius:20px;letter-spacing:0.04em;
+}
+
+/* ─── EDUCATION ─── */
+#education{background:var(--paper2)}
+.edu-cards{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.edu-card{
+  background:var(--paper);padding:44px;
+  border:1px solid var(--paper3);border-radius:2px;
+  position:relative;overflow:hidden;
+}
+.edu-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+}
+.edu-rank-badge{
+  position:absolute;top:20px;right:20px;
+  font-family:'DM Mono',monospace;
+  font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;
+  background:var(--gold-pale);color:var(--gold);
+  border:1px solid rgba(184,134,11,0.3);
+  padding:4px 10px;border-radius:20px;
+}
+.edu-inst-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;font-weight:700;color:var(--ink);
+  margin-bottom:6px;line-height:1.1;
+}
+.edu-degree-name{
+  font-size:0.9rem;font-weight:500;color:var(--gold);margin-bottom:4px;
+}
+.edu-years-tag{font-size:0.8rem;color:var(--ink3);margin-bottom:24px}
+.edu-modules{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.edu-module{
+  font-size:0.75rem;color:var(--ink2);
+  background:var(--paper2);border:1px solid var(--paper3);
+  padding:5px 12px;border-radius:2px;
+}
+.edu-highlights{list-style:none}
+.edu-highlights li{
+  font-size:0.88rem;color:var(--ink2);
+  padding:7px 0 7px 18px;position:relative;
+  border-bottom:1px solid var(--paper3);line-height:1.5;
+}
+.edu-highlights li:last-child{border-bottom:none}
+.edu-highlights li::before{
+  content:'';position:absolute;left:0;top:50%;
+  width:10px;height:1px;background:var(--gold);transform:translateY(-50%);
+}
+
+/* ─── ACHIEVEMENTS ─── */
+#achievements{background:var(--ink)}
+#achievements .sec-eyebrow{color:var(--gold2)}
+#achievements .sec-eyebrow::before{background:var(--gold2)}
+#achievements .sec-title{color:#FAFAF8}
+#achievements .sec-title em{color:var(--gold2)}
+.ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.ach-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.06);
+  padding:36px 30px;border-radius:2px;
+  transition:background 0.2s,border-color 0.2s;
+  position:relative;
+}
+.ach-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(184,134,11,0.4)}
+.ach-card.featured{
+  background:rgba(184,134,11,0.08);
+  border-color:rgba(184,134,11,0.3);
+}
+.ach-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:700;
+  color:rgba(250,250,248,0.06);
+  line-height:1;margin-bottom:8px;
+}
+.ach-icon{font-size:1.4rem;margin-bottom:16px;display:block}
+.ach-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-weight:600;color:#FAFAF8;
+  margin-bottom:8px;line-height:1.3;
+}
+.ach-desc{font-size:0.85rem;color:rgba(250,250,248,0.45);line-height:1.65}
+.ach-featured-tag{
+  position:absolute;top:16px;right:16px;
+  font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;
+  background:rgba(184,134,11,0.2);color:var(--gold2);
+  padding:3px 10px;border-radius:20px;border:1px solid rgba(212,160,23,0.3);
+}
+
+/* ─── SKILLS ─── */
+#skills{background:var(--paper)}
+.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.skill-category+.skill-category{margin-top:40px}
+.skill-cat-title{
+  font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:20px;
+  display:flex;align-items:center;gap:10px;
+}
+.skill-cat-title::after{content:'';flex:1;height:1px;background:var(--paper3)}
+.skill-bar{margin-bottom:16px}
+.skill-bar-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  margin-bottom:7px;
+}
+.skill-bar-name{font-size:0.88rem;color:var(--ink2);font-weight:400}
+.skill-bar-pct{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--ink3)}
+.skill-bar-track{height:2px;background:var(--paper3);border-radius:1px;overflow:hidden}
+.skill-bar-fill{
+  height:100%;border-radius:1px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+}
+.skills-right{}
+.domain-section+.domain-section{margin-top:40px}
+.domain-title{
+  font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:16px;
+  display:flex;align-items:center;gap:10px;
+}
+.domain-title::after{content:'';flex:1;height:1px;background:var(--paper3)}
+.domain-tags{display:flex;flex-wrap:wrap;gap:8px}
+.domain-tag{
+  font-size:0.8rem;color:var(--ink2);
+  background:var(--paper2);border:1px solid var(--paper3);
+  padding:7px 14px;border-radius:2px;
+  transition:all 0.18s;
+}
+.domain-tag:hover{background:var(--teal-pale);border-color:var(--teal);color:var(--teal)}
+
+/* ─── TESTIMONIALS / BEYOND ─── */
+#beyond{background:var(--paper2)}
+.beyond-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.beyond-text p{font-size:1rem;line-height:1.85;color:var(--ink2);margin-bottom:20px}
+.beyond-interests{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.int-chip{
+  display:flex;align-items:center;gap:8px;
+  background:var(--paper);border:1px solid var(--paper3);
+  padding:9px 18px;border-radius:32px;
+  font-size:0.85rem;color:var(--ink2);
+  transition:all 0.2s;
+}
+.int-chip:hover{border-color:var(--gold);background:var(--gold-pale);color:var(--ink)}
+.int-chip span{font-size:1rem}
+.beyond-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.beyond-photo-grid img{
+  width:100%;aspect-ratio:1;object-fit:cover;
+  border-radius:2px;filter:saturate(0.75) contrast(1.05);
+  transition:filter 0.3s,transform 0.3s;
+}
+.beyond-photo-grid img:hover{filter:saturate(1);transform:scale(1.02)}
+.beyond-photo-grid img:first-child{grid-column:1/-1;aspect-ratio:2/1}
+
+/* ─── CONTACT ─── */
+#contact{background:var(--ink)}
+#contact .sec-eyebrow{color:var(--gold2)}
+#contact .sec-eyebrow::before{background:var(--gold2)}
+#contact .sec-title{color:#FAFAF8}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px}
+.contact-text p{
+  font-size:1rem;line-height:1.8;
+  color:rgba(250,250,248,0.55);margin-bottom:28px;
+}
+.contact-links{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.c-link{
+  display:flex;align-items:center;gap:18px;
+  text-decoration:none;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:16px 20px;border-radius:2px;
+  transition:all 0.2s;
+}
+.c-link:hover{border-color:var(--gold);background:rgba(184,134,11,0.08)}
+.c-link-icon{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(184,134,11,0.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.95rem;flex-shrink:0;
+}
+.c-link-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(250,250,248,0.35);margin-bottom:2px}
+.c-link-val{font-size:0.9rem;color:rgba(250,250,248,0.8)}
+.avail-box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:36px;border-radius:2px;height:fit-content;
+}
+.avail-status{
+  display:flex;align-items:center;gap:10px;
+  font-size:0.78rem;color:#6EE7B7;
+  font-family:'DM Mono',monospace;
+  letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.avail-status::before{
+  content:'';width:8px;height:8px;border-radius:50%;
+  background:#6EE7B7;
+  box-shadow:0 0 0 3px rgba(110,231,183,0.2);
+  animation:pulse 2s ease infinite;
+}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(110,231,183,0.18)}50%{box-shadow:0 0 0 7px rgba(110,231,183,0.04)}}
+.avail-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:700;color:#FAFAF8;margin-bottom:10px;
+}
+.avail-sub{font-size:0.85rem;color:rgba(250,250,248,0.4);line-height:1.65;margin-bottom:24px}
+.avail-tags{display:flex;flex-wrap:wrap;gap:8px}
+.avail-tag{
+  font-size:0.75rem;color:var(--gold2);
+  background:rgba(212,160,23,0.1);
+  border:1px solid rgba(212,160,23,0.2);
+  padding:5px 14px;border-radius:20px;
+}
+
+/* ─── FOOTER ─── */
+footer{
+  background:var(--ink);
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding:36px 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+}
+.footer-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;color:rgba(250,250,248,0.4);
+}
+.footer-name strong{color:rgba(250,250,248,0.8)}
+.footer-copy{font-size:0.75rem;color:rgba(250,250,248,0.25);font-family:'DM Mono',monospace}
+
+/* ─── SCROLL REVEAL ─── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1000px){
+  nav{padding:0 24px}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .hero-left{padding:80px 24px}
+  .container{padding:0 24px}
+  .about-grid,.beyond-grid,.contact-grid,.skills-layout{grid-template-columns:1fr;gap:48px}
+  .edu-cards{grid-template-columns:1fr}
+  .ach-grid{grid-template-columns:1fr 1fr}
+  .exp-body-panel{padding-left:32px}
+  .exp-highlights{grid-template-columns:1fr}
+  footer{padding:24px}
+}
+@media(max-width:600px){
+  .ach-grid{grid-template-columns:1fr}
+  .hero-stats{flex-wrap:wrap;gap:20px}
+  .beyond-photo-grid{grid-template-columns:1fr}
+  .beyond-photo-grid img:first-child{grid-column:1}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-wordmark">D<em>.</em>Mathiazhagan</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Open to opportunities · 2026</div>
+    <h1 class="hero-h1">Marketing<br>&amp; <em>Strategy</em><br>Professional.</h1>
+    <p class="hero-subtitle">
+      Food scientist turned commercial strategist. From manufacturing floors in India to Warwick Business School — I bridge technical depth with strategic ambition to build brands and businesses that last.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-gold">Get in Touch</a>
+      <a href="#journey" class="btn-outline">My Story</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">3<span>yrs</span></div>
+        <div class="stat-label">Commercial Experience</div>
+      </div>
+      <div>
+        <div class="stat-num">30<span>+</span></div>
+        <div class="stat-label">B2B Clients Managed</div>
+      </div>
+      <div>
+        <div class="stat-num">2<span>countries</span></div>
+        <div class="stat-label">Work Experience</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img
+      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=80&fit=crop&crop=face"
+      alt="Professional portrait"
+      class="hero-photo-main"
+      onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&q=80&fit=crop'"
+    />
+    <div class="hero-photo-overlay">
+      <p>"The strongest business decisions combine analytical thinking, commercial awareness, and genuine empathy for customers."</p>
+      <cite>— Dineshvar Mathiazhagan</cite>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Food Technology</span>
+    <span class="ticker-item">FMCG Strategy</span>
+    <span class="ticker-item">B2B Sales</span>
+    <span class="ticker-item">Warwick Business School</span>
+    <span class="ticker-item">Brand Management</span>
+    <span class="ticker-item">Go-to-Market</span>
+    <span class="ticker-item">AAK India</span>
+    <span class="ticker-item">Coca-Cola</span>
+    <span class="ticker-item">TEDxWarwick</span>
+    <span class="ticker-item">Consumer Insights</span>
+    <span class="ticker-item">Key Account Management</span>
+    <span class="ticker-item">MSc Marketing &amp; Strategy</span>
+    <!-- duplicate for loop -->
+    <span class="ticker-item">Food Technology</span>
+    <span class="ticker-item">FMCG Strategy</span>
+    <span class="ticker-item">B2B Sales</span>
+    <span class="ticker-item">Warwick Business School</span>
+    <span class="ticker-item">Brand Management</span>
+    <span class="ticker-item">Go-to-Market</span>
+    <span class="ticker-item">AAK India</span>
+    <span class="ticker-item">Coca-Cola</span>
+    <span class="ticker-item">TEDxWarwick</span>
+    <span class="ticker-item">Consumer Insights</span>
+    <span class="ticker-item">Key Account Management</span>
+    <span class="ticker-item">MSc Marketing &amp; Strategy</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="sec-eyebrow">Who I Am</p>
+    <h2 class="sec-title">Bridging <em>science,</em><br>business &amp; customer insight.</h2>
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <p>I'm a <strong>marketing and strategy professional</strong> with a rare combination of food technology expertise and commercial leadership experience. Born and raised in Tamil Nadu, India, I've always been fascinated by how products, businesses, and people come together to create value.</p>
+        <p>After completing a <strong>B.Tech in Food Technology & Management at NIFTEM</strong> — one of India's leading food science institutions — I joined <strong>AAK India</strong>, a Swedish multinational specialising in specialty oils and fats. Over three years, I managed 30+ B2B accounts, drove 2,500+ MT in commercial volume, and was recognised as a <strong>top-performing sales professional</strong>.</p>
+        <p>Today, I'm channelling that commercial experience into an <strong>MSc Marketing & Strategy at Warwick Business School</strong>, sharpening my expertise in consumer behaviour, market research, digital strategy, and business analytics. I'm also Partnerships Lead at TEDxWarwick and contribute to consulting projects through Warwick Consulting Society.</p>
+        <p>My goal is a career at the <strong>intersection of marketing, strategy, and commercial leadership</strong> — where analytical thinking meets genuine customer empathy.</p>
+        <div class="about-chips" style="margin-top:32px">
+          <span class="chip">Tamil Nadu → UK</span>
+          <span class="chip">Food Science</span>
+          <span class="chip">FMCG &amp; B2B</span>
+          <span class="chip">Warwick MBA</span>
+          <span class="chip">Global Mindset</span>
+          <span class="chip">Data-Driven</span>
+        </div>
+      </div>
+      <div class="about-sidebar reveal" style="transition-delay:0.15s">
+        <img
+          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80&fit=crop"
+          alt="Professional at work"
+          class="sidebar-photo"
+          onerror="this.style.display='none'"
+        />
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--ink2);line-height:1.7;border-left:3px solid var(--gold);padding-left:20px">
+          "Growth comes from understanding people as much as products."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="container">
+    <p class="sec-eyebrow">The Story So Far</p>
+    <h2 class="sec-title">My <em>Journey</em></h2>
+    <div class="journey-timeline" style="position:relative">
+      <div class="journey-line"></div>
+
+      <div class="journey-item reveal">
+        <div class="journey-year">2000</div>
+        <div class="journey-content">
+          <p class="journey-place">Tamil Nadu, India</p>
+          <h3 class="journey-title">Where curiosity took root.</h3>
+          <p class="journey-body">Growing up in Tamil Nadu, I was surrounded by a culture of food, trade, and entrepreneurship. I was endlessly curious about how things were made, how businesses worked, and what made products succeed in the market. That curiosity never left me.</p>
+        </div>
+      </div>
+
+      <div class="journey-item reveal" style="transition-delay:0.1s">
+        <div class="journey-year">2018</div>
+        <div class="journey-content">
+          <p class="journey-place">NIFTEM, Sonipat — Delhi NCR</p>
+          <h3 class="journey-title">Science meets management.</h3>
+          <p class="journey-body">I moved from Tamil Nadu to Delhi NCR to pursue a B.Tech in Food Technology & Management at NIFTEM — one of India's most respected food science institutions. Here I learned food processing, quality systems, manufacturing, and product development, while simultaneously developing as a leader: captaining the volleyball team, representing students as Year Representative, and competing nationally.</p>
+          <img
+            src="https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=400&q=75&fit=crop"
+            alt="Food technology lab"
+            class="journey-photo"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <div class="journey-item reveal" style="transition-delay:0.15s">
+        <div class="journey-year">2021</div>
+        <div class="journey-content">
+          <p class="journey-place">Hindustan Coca-Cola Beverages</p>
+          <h3 class="journey-title">First taste of corporate operations.</h3>
+          <p class="journey-body">A formative internship at one of India's most iconic FMCG operations. Working on root cause analysis of PET bottle rejection and water optimisation in the Effluent Treatment Plant, I saw firsthand how rigorous quality thinking underpins great consumer brands. It was here I realised I wanted to connect the technical with the commercial.</p>
+        </div>
+      </div>
+
+      <div class="journey-item reveal" style="transition-delay:0.2s">
+        <div class="journey-year">2022</div>
+        <div class="journey-content">
+          <p class="journey-place">AAK India Pvt. Ltd. — Mumbai &amp; across India</p>
+          <h3 class="journey-title">Three years of commercial growth.</h3>
+          <p class="journey-body">Joining AAK India as a Technical Sales Officer was the turning point. Over three years, I managed 30+ B2B accounts across confectionery, bakery, and food manufacturing. I drove 2,500+ MT of commercial volume, commercialised solutions worth ~1.5M SEK in net margin, and presented to global leadership teams. I was recognised as Best Sales Employee and presented at AAK Global Kick-Off events in consecutive years. This role transformed my understanding of how businesses — and people — make decisions.</p>
+          <img
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&q=75&fit=crop"
+            alt="Business meeting and strategy"
+            class="journey-photo"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <div class="journey-item reveal" style="transition-delay:0.25s">
+        <div class="journey-year">2025</div>
+        <div class="journey-content">
+          <p class="journey-place">Warwick Business School, Coventry, UK</p>
+          <h3 class="journey-title">Sharpening strategy at Warwick.</h3>
+          <p class="journey-body">Trading Mumbai for Coventry, I enrolled in the MSc Marketing & Strategy at one of Europe's top business schools. Here I'm building on my commercial experience with rigorous frameworks in consumer behaviour, market research, digital strategy, and business analytics. Outside the classroom, I lead corporate partnerships at TEDxWarwick and contribute to consulting projects — including an engagement with DPD analysing cost efficiencies. I also led a team to Global 2nd Runner-Up at the NYIT International Dispute Resolution Competition, the only Indian team in the global Top 4.</p>
+          <img
+            src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&q=75&fit=crop"
+            alt="University campus"
+            class="journey-photo"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <div class="journey-item reveal" style="transition-delay:0.3s">
+        <div class="journey-year">2026</div>
+        <div class="journey-content">
+          <p class="journey-place">What's Next</p>
+          <h3 class="journey-title">Marketing. Strategy. Commercial leadership.</h3>
+          <p class="journey-body">Graduating mid-2026 and ready to bring together everything — food science, B2B commercial experience, and strategic marketing education — into a role where I can create genuine impact. I'm actively seeking opportunities in marketing strategy, brand management, FMCG commercial roles, B2B sales leadership, or management consulting. If my story resonates with what you're building, let's talk.</p>
+          <a href="#contact" class="btn-gold" style="display:inline-block;margin-top:24px">Start a Conversation</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <p class="sec-eyebrow">Career</p>
+    <h2 class="sec-title">Work <em>Experience</em></h2>
+    <div class="exp-grid">
+
+      <!-- AAK -->
+      <div class="exp-card open reveal">
+        <div class="exp-top" onclick="toggleCard(this)">
+          <div class="exp-logo">AAK</div>
+          <div class="exp-info">
+            <p class="exp-co">AAK India Pvt. Ltd.</p>
+            <p class="exp-role-title">Technical Sales Officer</p>
+          </div>
+          <div class="exp-right">
+            <span class="exp-period">July 2022 – May 2025</span>
+            <span class="exp-toggle">+</span>
+          </div>
+        </div>
+        <div class="exp-body-panel">
+          <p class="exp-context">AAK is a Swedish multinational specialising in value-adding vegetable oils and fats for the food industry. Working across confectionery, bakery, dairy, HORECA, and food manufacturing segments across India.</p>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Managed 30+ strategic B2B customer accounts across multiple segments</div>
+            <div class="exp-highlight">Contributed to 2,500+ MT of invoiced business volume</div>
+            <div class="exp-highlight">Commercialised customised solutions generating ~1.5M SEK in net margin</div>
+            <div class="exp-highlight">Presented to global leadership at AAK Kick-Off Events — two consecutive years</div>
+            <div class="exp-highlight">Recognised as top-performing sales professional, awarded Best Sales Employee</div>
+            <div class="exp-highlight">Managed portfolio of 50+ specialty ingredient products across categories</div>
+          </div>
+          <div class="exp-tag-row">
+            <span class="exp-tag">B2B Sales</span>
+            <span class="exp-tag">Key Account Management</span>
+            <span class="exp-tag">Product Applications</span>
+            <span class="exp-tag">Stakeholder Management</span>
+            <span class="exp-tag">FMCG</span>
+            <span class="exp-tag">Food Technology</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEDxWarwick -->
+      <div class="exp-card reveal">
+        <div class="exp-top" onclick="toggleCard(this)">
+          <div class="exp-logo">TED</div>
+          <div class="exp-info">
+            <p class="exp-co">TEDxWarwick</p>
+            <p class="exp-role-title">Partnerships Lead — Corporate Relations</p>
+          </div>
+          <div class="exp-right">
+            <span class="exp-period">2025 – Present</span>
+            <span class="exp-toggle">+</span>
+          </div>
+        </div>
+        <div class="exp-body-panel">
+          <p class="exp-context">TEDxWarwick is one of Warwick University's most recognised student-led platforms, bringing ideas worth spreading to a global audience.</p>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Lead corporate outreach and sponsorship development for the TEDxWarwick platform</div>
+            <div class="exp-highlight">Build relationships with organisations, sponsors, and industry leaders</div>
+            <div class="exp-highlight">Develop strategic partnerships that grow platform visibility and funding</div>
+          </div>
+          <div class="exp-tag-row">
+            <span class="exp-tag">Partnerships</span>
+            <span class="exp-tag">Corporate Relations</span>
+            <span class="exp-tag">Negotiation</span>
+            <span class="exp-tag">Brand Representation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warwick Consulting -->
+      <div class="exp-card reveal">
+        <div class="exp-top" onclick="toggleCard(this)">
+          <div class="exp-logo">WCS</div>
+          <div class="exp-info">
+            <p class="exp-co">Warwick Consulting Society</p>
+            <p class="exp-role-title">Consultant — DPD Project</p>
+          </div>
+          <div class="exp-right">
+            <span class="exp-period">2025 – 2026</span>
+            <span class="exp-toggle">+</span>
+          </div>
+        </div>
+        <div class="exp-body-panel">
+          <p class="exp-context">Live consulting engagement for DPD, a major European logistics provider, addressing operational inefficiencies and Penalty Charge Notice (PCN) cost reduction.</p>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Analysed business processes to identify PCN cost inefficiencies</div>
+            <div class="exp-highlight">Developed data-driven recommendations to reduce operational costs</div>
+            <div class="exp-highlight">Presented strategic solutions to DPD stakeholders</div>
+          </div>
+          <div class="exp-tag-row">
+            <span class="exp-tag">Consulting</span>
+            <span class="exp-tag">Process Analysis</span>
+            <span class="exp-tag">Data-Driven Strategy</span>
+            <span class="exp-tag">Logistics</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coca-Cola -->
+      <div class="exp-card reveal">
+        <div class="exp-top" onclick="toggleCard(this)">
+          <div class="exp-logo">HCCB</div>
+          <div class="exp-info">
+            <p class="exp-co">Hindustan Coca-Cola Beverages</p>
+            <p class="exp-role-title">Project Intern — Quality &amp; Operations</p>
+          </div>
+          <div class="exp-right">
+            <span class="exp-period">Sept 2021 – Jan 2022</span>
+            <span class="exp-toggle">+</span>
+          </div>
+        </div>
+        <div class="exp-body-panel">
+          <p class="exp-context">Internship at Coca-Cola's manufacturing operations in India, focused on quality assurance and process improvement.</p>
+          <div class="exp-highlights">
+            <div class="exp-highlight">Root cause analysis of PET bottle rejection rates</div>
+            <div class="exp-highlight">Water optimisation initiatives in the Effluent Treatment Plant</div>
+            <div class="exp-highlight">Supported quality and operational efficiency improvement projects</div>
+          </div>
+          <div class="exp-tag-row">
+            <span class="exp-tag">Quality Assurance</span>
+            <span class="exp-tag">Root Cause Analysis</span>
+            <span class="exp-tag">FMCG Operations</span>
+            <span class="exp-tag">Sustainability</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <p class="sec-eyebrow">Academic Background</p>
+    <h2 class="sec-title">Education</h2>
+    <div class="edu-cards">
+      <div class="edu-card reveal">
+        <span class="edu-rank-badge">Top 10 European B-School</span>
+        <p class="edu-inst-name">Warwick Business School</p>
+        <p class="edu-degree-name">MSc Marketing &amp; Strategy</p>
+        <p class="edu-years-tag">2025 – 2026 · Coventry, United Kingdom</p>
+        <div class="edu-modules">
+          <span class="edu-module">Marketing Strategy</span>
+          <span class="edu-module">Consumer Behaviour</span>
+          <span class="edu-module">Market Research</span>
+          <span class="edu-module">Digital Strategy</span>
+          <span class="edu-module">Business Analytics</span>
+          <span class="edu-module">Organisational Decision Making</span>
+          <span class="edu-module">Customer Experience</span>
+          <span class="edu-module">Strategic Management</span>
+        </div>
+        <ul class="edu-highlights">
+          <li>Partnerships Lead, TEDxWarwick</li>
+          <li>Warwick Consulting Society — DPD Engagement</li>
+          <li>Global 2nd Runner-Up, NYIT Dispute Resolution Competition</li>
+        </ul>
+      </div>
+      <div class="edu-card reveal" style="transition-delay:0.12s">
+        <span class="edu-rank-badge">Government of India Institution</span>
+        <p class="edu-inst-name">NIFTEM</p>
+        <p class="edu-degree-name">B.Tech Food Technology &amp; Management</p>
+        <p class="edu-years-tag">2018 – 2022 · Sonipat, India · CGPA 7.2/10</p>
+        <div class="edu-modules">
+          <span class="edu-module">Food Processing</span>
+          <span class="edu-module">Quality Systems</span>
+          <span class="edu-module">Product Development</span>
+          <span class="edu-module">Manufacturing Operations</span>
+          <span class="edu-module">Entrepreneurship</span>
+          <span class="edu-module">Supply Chain</span>
+        </div>
+        <ul class="edu-highlights">
+          <li>Final Year Project: Herbal Beverage Development</li>
+          <li>Captain, University Volleyball Team</li>
+          <li>Year Representative</li>
+          <li>Sports Representative</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <p class="sec-eyebrow">Recognition</p>
+    <h2 class="sec-title">Achievements &amp; <em>Awards</em></h2>
+    <div class="ach-grid">
+      <div class="ach-card featured reveal">
+        <span class="ach-featured-tag">Global</span>
+        <div class="ach-num">01</div>
+        <span class="ach-icon">🌍</span>
+        <p class="ach-title">Global 2nd Runner-Up — NYIT Dispute Resolution</p>
+        <p class="ach-desc">Led a team of 5 to finish in the global Top 4, competing against universities from multiple countries. Only Indian team to reach this stage.</p>
+      </div>
+      <div class="ach-card featured reveal" style="transition-delay:0.08s">
+        <span class="ach-featured-tag">Best Employee</span>
+        <div class="ach-num">02</div>
+        <span class="ach-icon">🏆</span>
+        <p class="ach-title">Best Sales Employee — AAK India</p>
+        <p class="ach-desc">Recognised early in career for outstanding commercial performance, customer relationship excellence, and business development impact.</p>
+      </div>
+      <div class="ach-card reveal" style="transition-delay:0.12s">
+        <div class="ach-num">03</div>
+        <span class="ach-icon">🎤</span>
+        <p class="ach-title">AAK Global Kick-Off — Two Consecutive Years</p>
+        <p class="ach-desc">Presented strategic initiatives and regional business performance to AAK's international leadership teams. Selected twice in succession.</p>
+      </div>
+      <div class="ach-card reveal" style="transition-delay:0.16s">
+        <div class="ach-num">04</div>
+        <span class="ach-icon">📢</span>
+        <p class="ach-title">Partnerships Lead, TEDxWarwick</p>
+        <p class="ach-desc">Leads corporate relations and sponsorship for one of Warwick University's most visible and prestigious student-run platforms.</p>
+      </div>
+      <div class="ach-card reveal" style="transition-delay:0.2s">
+        <div class="ach-num">05</div>
+        <span class="ach-icon">⚙️</span>
+        <p class="ach-title">Lean Six Sigma Workshop — IIPM Bangalore</p>
+        <p class="ach-desc">Completed formal training in process excellence, continuous improvement methodology, and operational problem-solving frameworks.</p>
+      </div>
+      <div class="ach-card reveal" style="transition-delay:0.24s">
+        <div class="ach-num">06</div>
+        <span class="ach-icon">🏐</span>
+        <p class="ach-title">Volleyball Team Captain — NIFTEM</p>
+        <p class="ach-desc">Led the university team at inter-university tournaments across India. Built resilience, leadership, and high-performance team dynamics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="sec-eyebrow">Capabilities</p>
+    <h2 class="sec-title">Skills</h2>
+    <div class="skills-layout">
+      <div>
+        <div class="skill-category">
+          <p class="skill-cat-title">Core Competencies</p>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span class="skill-bar-name">B2B Sales &amp; Account Management</span><span class="skill-bar-pct">93%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:93%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span class="skill-bar-name">Stakeholder &amp; Partnership Management</span><span class="skill-bar-pct">90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span class="skill-bar-name">Marketing Strategy &amp; Planning</span><span class="skill-bar-pct">87%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:87%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span class="skill-bar-name">Consumer &amp; Market Research</span><span class="skill-bar-pct">84%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:84%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span class="skill-bar-name">Business Consulting &amp; Problem Solving</span><span class="skill-bar-pct">82%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <p class="skill-cat-title">Tools &amp; Platforms</p>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span class="skill-bar-name">Microsoft Excel &amp; PowerPoint</span><span class="skill-bar-pct">92%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span class="skill-bar-name">SAP &amp; CRM Systems</span><span class="skill-bar-pct">80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-head"><span class="skill-bar-name">Tableau (Data Visualisation)</span><span class="skill-bar-pct">68%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="width:68%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-right">
+        <div class="domain-section">
+          <p class="domain-title">Marketing &amp; Strategy</p>
+          <div class="domain-tags">
+            <span class="domain-tag">Go-to-Market Strategy</span>
+            <span class="domain-tag">Brand Management</span>
+            <span class="domain-tag">Consumer Insights</span>
+            <span class="domain-tag">Digital Marketing</span>
+            <span class="domain-tag">Growth Strategy</span>
+            <span class="domain-tag">Market Research</span>
+            <span class="domain-tag">Customer Experience</span>
+            <span class="domain-tag">Strategic Planning</span>
+          </div>
+        </div>
+        <div class="domain-section">
+          <p class="domain-title">Commercial &amp; Sales</p>
+          <div class="domain-tags">
+            <span class="domain-tag">Key Account Management</span>
+            <span class="domain-tag">Negotiation</span>
+            <span class="domain-tag">Channel Management</span>
+            <span class="domain-tag">Business Development</span>
+            <span class="domain-tag">Revenue Growth</span>
+          </div>
+        </div>
+        <div class="domain-section">
+          <p class="domain-title">Industry Knowledge</p>
+          <div class="domain-tags">
+            <span class="domain-tag">FMCG</span>
+            <span class="domain-tag">Food Technology</span>
+            <span class="domain-tag">Quality Assurance</span>
+            <span class="domain-tag">Supply Chain</span>
+            <span class="domain-tag">Product Development</span>
+            <span class="domain-tag">Lean / Six Sigma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND -->
+<section id="beyond">
+  <div class="container">
+    <p class="sec-eyebrow">The Person Behind the CV</p>
+    <h2 class="sec-title">Beyond <em>Work</em></h2>
+    <div class="beyond-grid">
+      <div>
+        <div class="beyond-text reveal">
+          <p>Sport has been one of the most formative parts of my journey. As a volleyball captain at NIFTEM, I led the team through inter-university competitions across India — learning discipline, resilience, and the importance of performing under pressure. The mindset that wins on court carries directly into the boardroom.</p>
+          <p>Moving from Tamil Nadu to Delhi NCR for university, then Mumbai for work, and now Coventry in the UK has given me a global perspective that's rare in someone at early career stage. I'm comfortable navigating diverse environments, cultures, and professional contexts — whether it's managing FMCG clients in Mumbai or building partnerships for a global ideas platform at Warwick.</p>
+          <p>I'm passionate about travel, cultural exchange, and public speaking. Every new city, conversation, and challenge shapes how I think about business, strategy, and the people who make things happen.</p>
+        </div>
+        <div class="beyond-interests reveal" style="transition-delay:0.1s">
+          <div class="int-chip"><span>🏐</span> Volleyball Captain</div>
+          <div class="int-chip"><span>✈️</span> Solo International Travel</div>
+          <div class="int-chip"><span>🌍</span> Cultural Exchange</div>
+          <div class="int-chip"><span>🎤</span> Public Speaking</div>
+          <div class="int-chip"><span>📚</span> Continuous Learning</div>
+          <div class="int-chip"><span>☕</span> Food &amp; Beverages</div>
+        </div>
+      </div>
+      <div class="beyond-photo-grid reveal" style="transition-delay:0.15s">
+        <img
+          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=75&fit=crop"
+          alt="Conference and events"
+          onerror="this.style.display='none'"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=75&fit=crop"
+          alt="Team collaboration"
+          onerror="this.style.display='none'"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&q=75&fit=crop"
+          alt="Strategy and planning"
+          onerror="this.style.display='none'"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="sec-eyebrow">Let's Connect</p>
+    <h2 class="sec-title">Get in <em>Touch</em></h2>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-text reveal">
+          <p>I'm completing my MSc at Warwick Business School and graduating mid-2026. I'm actively exploring full-time opportunities in marketing, strategy, FMCG commercial, or consulting roles — in the UK or internationally.</p>
+          <p>If you see a fit, or simply want to talk about marketing, food, strategy, or business — I'd love to hear from you.</p>
+        </div>
+        <div class="contact-links reveal" style="transition-delay:0.1s">
+          <a href="mailto:dineshvar@email.com" class="c-link">
+            <div class="c-link-icon">✉️</div>
+            <div>
+              <div class="c-link-label">Email</div>
+              <div class="c-link-val">dineshvar@email.com</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/dineshvar" target="_blank" class="c-link">
+            <div class="c-link-icon">💼</div>
+            <div>
+              <div class="c-link-label">LinkedIn</div>
+              <div class="c-link-val">linkedin.com/in/dineshvar</div>
+            </div>
+          </a>
+          <a class="c-link">
+            <div class="c-link-icon">📍</div>
+            <div>
+              <div class="c-link-label">Location</div>
+              <div class="c-link-val">Coventry, United Kingdom</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="avail-box reveal" style="transition-delay:0.15s">
+        <div class="avail-status">Open to opportunities</div>
+        <p class="avail-heading">Graduating mid-2026</p>
+        <p class="avail-sub">Based in the UK. Open to relocation. Actively seeking full-time roles from mid-2026 onward.</p>
+        <div class="avail-tags">
+          <span class="avail-tag">Marketing Manager</span>
+          <span class="avail-tag">Brand Strategy</span>
+          <span class="avail-tag">FMCG Commercial</span>
+          <span class="avail-tag">B2B Sales Lead</span>
+          <span class="avail-tag">Strategy Consultant</span>
+          <span class="avail-tag">Business Development</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-name"><strong>Dineshvar Mathiazhagan</strong> — Marketing &amp; Strategy</p>
+  <p class="footer-copy">© 2026 · Built with intention.</p>
+</footer>
+
+<script>
+function toggleCard(btn){
+  const card=btn.closest('.exp-card');
+  card.classList.toggle('open');
+}
+
+// Scroll reveal
+const revealEls=document.querySelectorAll('.reveal');
+const ro=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target)}
+  });
+},{threshold:0.12});
+revealEls.forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
